@@ -1,0 +1,37 @@
+Global execution context (GEC):- It automatically created when javascript starts running. Before anything happens, the GEC is created by the javascript engine. It sets up the environment to execute your entire code.
+Inside the GEC, "this" points to the global object.
+
+Phases of global execution :-
+
+1) Creation phase :-
+
+JavaScript moves all variable and function declarations to the top of the file.
+Variables are assigned undefined, and functions are stored fully in memory.
+The Global Object and this are also created.
+
+2) Execution phase :- 
+
+Once the setup is complete, JavaScript starts executing the code line by line.
+
+It assigns values to variables.
+It executes functions when they’re called.
+
+Hoisting : 
+
+Hoisting in JavaScript is a behavior where variable declarations, function declarations, and certain keywords (like var, function, and class) are moved to the top of their scope before code execution. This means you can use variables or functions in your code before they are actually defined.
+
+Declaration are hoisted, assignments are not hoisted.
+
+Variables declared with let and const are hoisted but not initialized. They remain in a "temporal dead zone" (TDZ) from the start of the block until the declaration is encountered.
+
+Class declarations are hoisted but, like let and const, they are not initialized.
+
+Keyword		Hoisted?	Initialized?		Notes
+var		Yes		No (set to undefined)	Usable before declaration, but value is undefined.
+let		Yes		No (TDZ applies)	Cannot be accessed before declaration.
+const		Yes		No (TDZ applies)	Must be initialized during declaration.
+function	Yes		Yes			Fully hoisted with its definition.
+class		Yes		No			Cannot be used before declaration.
+
+
+
